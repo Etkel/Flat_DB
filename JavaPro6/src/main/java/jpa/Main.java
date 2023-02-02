@@ -258,8 +258,9 @@ public class Main {
                 List<Flat> list = (List<Flat>) query.getResultList();
                 for (Flat f : list)
                     System.out.println(f);
-            } catch (NoSuchElementException ex) {
+            } catch (Exception ex) {
                 System.out.println("Wrong parameters!");
+                ex.printStackTrace();
             }
         }
 
