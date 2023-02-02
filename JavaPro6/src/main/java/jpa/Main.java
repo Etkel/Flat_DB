@@ -258,9 +258,8 @@ public class Main {
                 List<Flat> list = (List<Flat>) query.getResultList();
                 for (Flat f : list)
                     System.out.println(f);
-            } catch (NoResultException ex) {
-                System.out.println("Flat not found!");
-                return;
+            } catch (NoSuchElementException ex) {
+                System.out.println("Wrong parameters!");
             }
         }
 
